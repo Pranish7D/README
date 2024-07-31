@@ -1,6 +1,4 @@
-Certainly! Here’s a detailed breakdown of each phase for the phishing email detection system:
-
----
+# Certainly! Here’s a detailed breakdown of each phase for the phishing email detection system:
 
 ## Phase 1: Requirement Analysis
 
