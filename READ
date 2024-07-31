@@ -2,7 +2,7 @@ Certainly! Here’s a detailed breakdown of each phase for the phishing email de
 
 ---
 
-## **Phase 1: Requirement Analysis**
+## Phase 1: Requirement Analysis
 
 ### **1.1 Objectives**
 - **Develop a Detection System:** Build an advanced phishing email detection system using the 1D-CNNPD with Leaky ReLU and Bi-GRU model.
