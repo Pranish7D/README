@@ -1,6 +1,6 @@
-# Certainly! Here’s a detailed breakdown of each phase for the phishing email detection system:
+#  Email Protection and Analysis
 
-## Phase 1: Requirement Analysis
+## **Phase 1: Requirement Analysis**
 
 ### **1.1 Objectives**
 - **Develop a Detection System:** Build an advanced phishing email detection system using the 1D-CNNPD with Leaky ReLU and Bi-GRU model.
@@ -131,16 +131,58 @@
 - **End-User Involvement:** Engage users in testing to gather feedback on system usability.
 - **Feedback Incorporation:** Make adjustments based on user feedback to improve the system.
 
+Certainly! Here’s the detailed report for the **API** and **Setup** phases, including all necessary instructions:
+
+---
+
 ## **Phase 6: Deployment and Monitoring**
 
-### **6.1 Deployment**
-- **Production Deployment:** Deploy the system in a production environment with high availability and failover support.
+### **6.1 API Integration**
 
-### **6.2 Incident Response**
-- **Response Plan:** Develop procedures for handling false positives and missed detections to ensure system reliability.
+**Open PageRank API**:
+- **Purpose**: Open PageRank provides a public and transparent ranking of domains. This API is used in the project to assess domain reputation.
+- **Features**:
+  - Retrieve domain rankings.
+  - Evaluate domain reputation based on PageRank metrics.
+- **Usage**: The API is called to get the rank of a domain, which is then used in the domain reputation analysis to determine the credibility of the domain.
+- **Documentation**: For more details on using the Open PageRank API, visit the [Open PageRank API Documentation](https://www.domcop.com/openpagerank/documentation).
 
-### **6.3 Real-time Monitoring**
-- **Certificate Status Monitoring:** Implement mechanisms to monitor certificate validity using OCSP or CRLs during email transmission.
+### **6.2 Setup Instructions**
+
+**1. Clone the Repository:**
+   - Use Git to clone the repository containing the project code.
+   - Open your terminal and run the following command:
+     ```bash
+     git clone <repository-url>
+     cd <project-directory>
+     ```
+   - Replace `<repository-url>` with the URL of your Git repository and `<project-directory>` with the name of the directory where the repository is cloned.
+
+**2. Install Required Packages:**
+   - Ensure that you have Python and pip installed.
+   - Install the required Python packages using the `requirements.txt` file provided in the project. Run the following command:
+     ```bash
+     pip install -r requirements.txt
+     ```
+   - This command installs all the dependencies listed in the `requirements.txt` file.
+
+**3. Update Constants in the Script:**
+   - **IMAP_SERVER**: Specify the IMAP server address for your email provider. This address is required for the system to connect to your email server and retrieve emails.
+   - **EMAIL**: Enter your email address which will be used to connect to the email server.
+   - **PASSWORD**: Use an app-generated password for secure access to your email account. This is different from your regular email password and can usually be generated through your email provider’s security settings.
+   - **API Key**: Replace `'your_api_key'` with your actual API key from Open PageRank. This key is used to authenticate requests to the Open PageRank API.
+
+### **Example Configuration:**
+```python
+IMAP_SERVER = 'imap.your-email-provider.com'
+EMAIL = 'your-email@example.com'
+PASSWORD = 'your-app-generated-password'
+OPEN_PAGE_RANK_API_KEY = 'your-api-key'
+```
+
+**4. Additional Setup Notes:**
+- **Environment Variables**: For security reasons, consider storing sensitive information like API keys and passwords in environment variables rather than hardcoding them in the script.
+- **Testing**: After setup, test the integration by running a few example scripts to ensure that the connection to the IMAP server and API requests are functioning correctly.
 
 ## **Phase 7: Maintenance and Updates**
 
@@ -153,3 +195,6 @@
 - **New Features:** Add features based on user feedback and emerging threats.
 - **Security Assessments:** Conduct regular assessments to ensure the system remains secure and effective.
 
+---
+
+This detailed breakdown covers each phase of the project, incorporating the key points and code functionalities described.
